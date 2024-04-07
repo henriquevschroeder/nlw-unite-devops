@@ -1,0 +1,15 @@
+# Terraform & environment specific
+.terraform/
+*.tfstate
+*.tfstate.*
+terraform.tfvars
+*.tfvars
+*.auto.tfvars
+terraform.rc
+terraform.tfstate.backup
+*.backup
+*.log
+override.tf
+override.tf.json
+*_override.tf
+*_override.tf.json
