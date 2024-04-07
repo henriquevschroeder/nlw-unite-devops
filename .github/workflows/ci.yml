@@ -4,6 +4,8 @@ on:
   push:
     branches:
       - main
+    paths:
+      - 'api/**'
 
 jobs:
   build-and-push:
@@ -21,4 +23,4 @@ jobs:
         echo "sha=$SHA" >> $GITHUB_OUTPUT
 
     - name: Build Docker Image
-      run: docker build -t henriquevschroeder/nlw_unite_devops:${{ steps.generate_sha.outputs.sha }} .
+      run: docker build -t henriquevschroeder/nlw_unite_devops:${{ steps.generate_sha.outputs.sha }} -f ./api/Dockerfile ./api
