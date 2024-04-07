@@ -11,6 +11,8 @@ services:
       - POSTGRES_USER=admin
       - POSTGRES_PASSWORD=admin
       - POSTGRES_DB=passin
+    volumes:
+      - 'db:/var/lib/postgresql/data'
     networks:
       - passin
 
@@ -31,3 +33,6 @@ services:
 networks:
   passin:
     driver: bridge
+
+volumes:
+  db:
