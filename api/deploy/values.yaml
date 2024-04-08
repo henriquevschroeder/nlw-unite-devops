@@ -2,7 +2,7 @@ replicaCount: 5
 image:
   repository: henriquevsch/nlw.service.passin
   pullPolicy: Always
-  tag: bde1e19
+  tag: f69f2c2
   port: 3333
   databaseConnectionUrl: null
   apiBaseUrl: htpp://localhost:3333
